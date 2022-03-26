@@ -1,0 +1,12 @@
+{
+  "name": "assignmen1",
+  "version": "1.0.0",
+  "description": "first assigment of our class04 node js homework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "author": "hacci korbayram",
+  "license": "MIT"
+}
