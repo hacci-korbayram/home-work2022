@@ -1,0 +1,12 @@
+[
+  {
+    "id": "7fade5d2-8ee7-4e63-993b-c3f48365e4a4",
+    "dishName": "Slanutok",
+    "status": "cancelled"
+  },
+  {
+    "id": "f3727676-9828-4204-8c0f-409e4ff711d3",
+    "dishName": "Pajka",
+    "status": "new"
+  }
+]

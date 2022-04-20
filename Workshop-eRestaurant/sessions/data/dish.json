@@ -1,0 +1,32 @@
+[
+  {
+    "id": "7905ef07-8e5a-4a1c-bacc-c16f6fad1a8b",
+    "name": "Chicken",
+    "price": "900"
+  },
+  {
+    "id": "37fda302-c918-45a8-9526-d26842d5f30c",
+    "name": "pita",
+    "price": "300"
+  },
+  {
+    "id": "c30409c6-d445-4d4d-876e-b20d6450a322",
+    "name": "hacci",
+    "price": "423423"
+  },
+  {
+    "id": "6d8f2d4c-d63b-408a-9367-90c4d80ad299",
+    "name": "biftek",
+    "price": "500"
+  },
+  {
+    "id": "6a9a76ee-9680-40a0-8683-657f4ca43b60",
+    "name": "hamburger",
+    "price": "100"
+  },
+  {
+    "id": "6ebd0fd1-a0df-4013-9fef-433d2b4c20cb",
+    "name": "kebap",
+    "price": "400"
+  }
+]
