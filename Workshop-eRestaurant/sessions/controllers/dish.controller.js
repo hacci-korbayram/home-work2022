@@ -2,7 +2,7 @@ const DishModel = require("../models/dish.model");
 
 
 class DishController{
-   //1. Fetch all students
+   //1. Fetch all dish
     static async fetchAllDishs(req, res){
         try {
             const dishs = await DishModel.getAllDishs();
@@ -11,7 +11,7 @@ class DishController{
             res.status(400).send(error);
         }
     }
- //2. Fetch student by id
+ //2. Fetch dish by id
     static async fetchDishById(req, res){
         try {
             const {id: dishId} = req.params;
@@ -22,7 +22,7 @@ class DishController{
             res.status(400).send(error);
         }
     }
-  //3. Add new student create new routerden
+  //3. Add new dish create new routerden
     static async createNewDish(req, res) {
         try {
             const newDishData = req.body;
@@ -35,7 +35,7 @@ class DishController{
         }
     }
 
-    //4. Update Student
+    //4. Update dish
     static async updateDish(req, res){
         try {
             const dishId = req.params.id;
@@ -50,7 +50,7 @@ class DishController{
         }
     }
 
-  //5. Delete student
+  //5. Delete dish
     static async deleteDish(req, res) {
         try {
             const dishId = req.params.id;

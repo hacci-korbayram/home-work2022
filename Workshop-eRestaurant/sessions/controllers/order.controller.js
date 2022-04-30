@@ -10,7 +10,7 @@ class OrderController {
             res.status(400).send(error);
         }
     }
-  //1. Fetch student by id
+  //1. Fetch order by id
     static async fetchOrderById(req, res) {
         try {
             const { id: orderId } = req.params;
@@ -59,7 +59,7 @@ class OrderController {
             res.status(400).send(error);
         }
     }
-//5. Delete student
+//5. Delete order
     static async deleteOrder(req, res){
         try {
             const orderId = req.params.id;
