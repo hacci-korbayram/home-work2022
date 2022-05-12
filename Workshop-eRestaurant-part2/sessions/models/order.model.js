@@ -8,10 +8,12 @@ const ordersPath = path.join(__dirname, "..", "data", "orders.json");
 
 
 class OrderModel {
+    //1. Get all orders
     static async getAllOrders() {
         return DataService.readJSONFile(ordersPath);
 
     }
+    //2. Get order by id
     static async getAllOrderById(orderId) {
         const orders = await this.getAllOrders();
 
@@ -24,6 +26,7 @@ class OrderModel {
             return Promise.reject({ msg: "No order found" });
         }
     }
+    //3. Add new order
     static async addNewOrder(newOrderData) {
         const orders = await this.getAllOrders();
         const nameExists = orders.some(order => order.neme === newOrderData.name
@@ -56,6 +59,7 @@ class OrderModel {
     
         return updatedOrder;
     }
+    //4. Update order PATCH or PUT
     static async patchOrder(orderId, orderUpdateData) {
         const orders = await this.getAllOrders();
 
@@ -69,6 +73,9 @@ class OrderModel {
         await DataService.saveJSONFile(ordersPath, updateOrders);
 
     }
+
+    //5. Delete order
+
     static async deleteOrder(orderId) {
         const orders = await this.getAllOrders();
         const updatedOrders = orders.filter(order => order.id !== orderId

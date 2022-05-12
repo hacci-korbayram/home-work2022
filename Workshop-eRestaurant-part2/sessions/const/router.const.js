@@ -7,4 +7,7 @@ router.use("/dishs", dishsRouter);
 router.use("/auth", authRouter);
 router.use("/orders", ordersRouter);
 
+
+router.use(authRouter);
+
 module.exports = router;

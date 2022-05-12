@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const OrderController = require("../controllers/order.controller");
 const roleValidator = require("../middleware/role-validator-middleware");
-const sessionValidator = require("../middleware/session-validator.middleware");
+// const sessionValidator = require("../middleware/session-validator.middleware");
 
 // router.use(roleValidator);
 
-router.get("/all", sessionValidator, OrderController.fetchAllOrders);
+router.get("/all",  OrderController.fetchAllOrders);
 
-router.get("/:id", sessionValidator, OrderController.fetchOrderById);
+router.get("/:id",  OrderController.fetchOrderById);
 
 router.post("/add", roleValidator, OrderController.createNewOrder);
 
