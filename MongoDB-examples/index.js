@@ -37,7 +37,7 @@ app.get("/:id", async (req, res) => {
 
         if (!car) return res.status(404).send({ message: "not found" });
 
-   
+
 
         res.status(200).send(car);
     } catch (error) {
@@ -123,21 +123,21 @@ app.patch("/:id", async (req, res) => {
 });
 
 //6.deleting a response
-app.delete("/:id", async (req, res)=>{
+app.delete("/:id", async (req, res) => {
     try {
-           const carId = req.params.id;
-           const database = getDb();
-           const cars = database.collection("cars");
-           const response = await cars.deleteOne({_id: new ObjectId(carId)});
-           
-           if(response.deleteCount === 0)
-           return res.status(404).send({msg: "car not found"});
+        const carId = req.params.id;
+        const database = getDb();
+        const cars = database.collection("cars");
+        const response = await cars.deleteOne({ _id: new ObjectId(carId) });
 
-           res.status(200).send(response);
+        if (response.deleteCount === 0)
+            return res.status(404).send({ msg: "car not found" });
+
+        res.status(200).send(response);
     } catch (error) {
         console.log(error);
         res.status(400).send(error);
-        
+
     }
 });
 app.listen(3000, () => {
