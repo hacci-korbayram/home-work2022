@@ -62,7 +62,7 @@ class StudentController {
             if (!response)
                 return res
                     .status(404)
-                    .send({ msg: `student with id ${studentId} not found` });
+                    .send({ msg: `student with id ${studentId} deleted` });
             res.status(200).send(response);
         } catch (error) {
             console.log(error);

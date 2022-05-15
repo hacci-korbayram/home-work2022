@@ -1,4 +1,3 @@
-const res = require("express/lib/response");
 const Student = require("../models/student.model");
 
 class StudentService {
