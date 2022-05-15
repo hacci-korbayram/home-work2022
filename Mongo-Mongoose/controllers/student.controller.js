@@ -4,7 +4,8 @@ const StudentService = require("../services/student.service");
 class StudentController {
     static async getAllStudents(req, res) {
         try {
-            const students = await StudentService.getAllStudents();
+            const queryData = req.query;
+            const students = await StudentService.getAllStudents(queryData);
             res.status(200).send(students);
         } catch (error) {
             console.log(error);

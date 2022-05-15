@@ -2,14 +2,19 @@ const Student = require("../models/student.model");
 
 class StudentService {
   //1. Get all students
-  static async getAllStudents() {
-    const students = await Student.find({});
+  static async getAllStudents(queryData) {
+    const students = await Student.find(queryData || {}).setOptions({
+      sanitizeFilter: true,
+    });
 
     return students;
   }
   //2. Get student by id
   static async getStudentById(studentId) {
-    const student = await Student.findById(studentId);
+    const student = await Student.findById(studentId).populate(
+      "course",
+      "-students"
+    );
 
     return student;
   }

@@ -30,6 +30,10 @@ const studentSchema = new Schema({
     //unique creates indexes for the specified value
     unique: true,
   },
+  course: {
+    type: Schema.Types.ObjectId,
+    ref: "Course",
+  },
 });
 
 //Creating the student model
